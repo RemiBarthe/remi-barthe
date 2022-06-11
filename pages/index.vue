@@ -8,23 +8,13 @@
         class="pointer"
         :style="[pointerPosition, pointerCss(pointer)]"
       ></div>
-      <!-- <div class="pointer" :style="pointerPosition"></div>
-      <div class="pointer" :style="pointerPosition"></div>
-      <div class="pointer" :style="pointerPosition"></div>
-      <div class="pointer" :style="pointerPosition"></div>
-      <div class="pointer" :style="pointerPosition"></div> -->
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
-interface Pointer {
-  size: Number;
-  transitionDuration: Number;
-  margin: Number;
-}
+import { POINTERS, Pointer } from '@/plugins/pointers';
 
 export default defineComponent({
   name: 'HomePage',
@@ -33,43 +23,7 @@ export default defineComponent({
       x: 0,
       y: 0
     },
-    pointers: [
-      {
-        size: 18,
-        transitionDuration: 0.34,
-        margin: 0
-      } as Pointer,
-      {
-        size: 17,
-        transitionDuration: 0.32,
-        margin: 0.5
-      } as Pointer,
-      {
-        size: 16,
-        transitionDuration: 0.3,
-        margin: 1
-      } as Pointer,
-      {
-        size: 15,
-        transitionDuration: 0.28,
-        margin: 1.5
-      } as Pointer,
-      {
-        size: 14,
-        transitionDuration: 0.26,
-        margin: 2
-      } as Pointer,
-      {
-        size: 13,
-        transitionDuration: 0.24,
-        margin: 2.5
-      } as Pointer,
-      {
-        size: 10,
-        transitionDuration: 0.22,
-        margin: 4
-      } as Pointer
-    ]
+    pointers: POINTERS
   }),
   computed: {
     pointerPosition() {
