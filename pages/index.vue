@@ -3,6 +3,8 @@
     <StickyButton style="margin-left: 100px; margin-top: 250px"
       >Ma Value</StickyButton
     >
+
+    <StickyButton>Ma super super Value</StickyButton>
     <img
       alt="ok"
       src="https://dennissnellenberg.com/media/pages/work/emble-studio/cb063dfbe5-1646837261/thumbnail-emble-yellow.jpg"
@@ -80,7 +82,7 @@ export default defineComponent({
     will-change: transform;
     border-radius: 50px;
     backface-visibility: hidden;
-    background-color: blue;
+    background-color: #0a73ba;
     transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 }
