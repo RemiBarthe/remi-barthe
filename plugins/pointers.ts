@@ -1,7 +1,7 @@
 export interface Pointer {
-    size: Number;
-    transitionDuration: Number;
-    margin: Number;
+    size: number;
+    transitionDuration: number;
+    margin: number;
   }
 
 export default [

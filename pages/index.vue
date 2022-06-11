@@ -1,6 +1,12 @@
 <template>
   <div>
-    <StickyButton>Ma Value</StickyButton>
+    <StickyButton style="margin-left: 100px; margin-top: 250px"
+      >Ma Value</StickyButton
+    >
+    <img
+      alt="ok"
+      src="https://dennissnellenberg.com/media/pages/work/emble-studio/cb063dfbe5-1646837261/thumbnail-emble-yellow.jpg"
+    />
 
     <div class="pointers">
       <div
@@ -28,7 +34,7 @@ export default defineComponent({
     pointers: POINTERS
   }),
   computed: {
-    pointerPosition() {
+    pointerPosition(): string {
       return `transform: translateX(${this.mousePointer.x}px) translateY(${this.mousePointer.y}px);`;
     }
   },
@@ -43,10 +49,10 @@ export default defineComponent({
   methods: {
     onMouseMove(event: MouseEvent) {
       this.showPointer = true;
-      this.mousePointer.x = event.pageX - 18;
-      this.mousePointer.y = event.pageY - 42;
+      this.mousePointer.x = event.pageX - 11;
+      this.mousePointer.y = event.pageY - 11;
     },
-    pointerCss(pointer: Pointer) {
+    pointerCss(pointer: Pointer): string {
       return `
       width: ${pointer.size}px;
       height: ${pointer.size}px;
@@ -68,6 +74,8 @@ export default defineComponent({
 .pointers {
   .pointer {
     position: absolute;
+    top: 0;
+    left: 0;
     pointer-events: none;
     will-change: transform;
     border-radius: 50px;
