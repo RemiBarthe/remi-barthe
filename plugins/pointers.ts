@@ -4,7 +4,7 @@ export interface Pointer {
     margin: Number;
   }
 
-export const POINTERS = [
+export default [
     {
       size: 18,
       transitionDuration: 0.34,

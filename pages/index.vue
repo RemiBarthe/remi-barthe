@@ -5,6 +5,7 @@
     <div class="pointers">
       <div
         v-for="pointer in pointers"
+        v-show="showPointer"
         class="pointer"
         :style="[pointerPosition, pointerCss(pointer)]"
       ></div>
@@ -14,7 +15,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { POINTERS, Pointer } from '@/plugins/pointers';
+import { default as POINTERS, Pointer } from '@/plugins/pointers';
 
 export default defineComponent({
   name: 'HomePage',
@@ -23,6 +24,7 @@ export default defineComponent({
       x: 0,
       y: 0
     },
+    showPointer: false,
     pointers: POINTERS
   }),
   computed: {
@@ -32,12 +34,15 @@ export default defineComponent({
   },
   mounted() {
     document.addEventListener('mousemove', this.onMouseMove);
+    document.addEventListener('mouseleave', () => this.hidePointer());
   },
   unmounted() {
     document.removeEventListener('mousemove', this.onMouseMove);
+    document.removeEventListener('mouseleave', this.hidePointer());
   },
   methods: {
     onMouseMove(event: MouseEvent) {
+      this.showPointer = true;
       this.mousePointer.x = event.pageX - 18;
       this.mousePointer.y = event.pageY - 42;
     },
@@ -49,6 +54,11 @@ export default defineComponent({
       margin-top: ${pointer.margin}px;
       margin-left: ${pointer.margin}px;
       `;
+    },
+    hidePointer() {
+      setTimeout(() => {
+        this.showPointer = false;
+      }, 150);
     }
   }
 });
