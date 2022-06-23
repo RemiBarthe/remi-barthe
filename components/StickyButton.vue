@@ -68,32 +68,37 @@ export default defineComponent({
   align-items: center;
   justify-content: center;
   will-change: transform;
+  // z-index: 11;
 
   .sticky-button {
-    padding: 20px 40px;
+    padding: 10px;
     border: none;
     z-index: 10;
     background-color: transparent;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s;
     // border: solid 3px violet;
     will-change: transform;
   }
   .button-background {
-    background-color: white;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+    background-color: transparent;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s;
     position: absolute;
-    border-radius: 12px;
+    border-radius: 18px;
     will-change: transform;
     width: 0%;
     height: 20%;
+    z-index: 9;
   }
+
   &:hover {
-    z-index: 11;
     .sticky-button {
       color: white;
+
+      filter: invert(100%);
     }
 
     .button-background {
-      background-color: #0a73ba;
+      background-color: #4062bb;
       width: 100%;
       height: 100%;
     }
