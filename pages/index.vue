@@ -20,7 +20,19 @@
 
     <div class="presentation">
       <div class="title">
-        <div class="title-decoration"></div>
+        <div class="title-decoration">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <h2>
           web_ <br />
           developer
@@ -29,6 +41,7 @@
       <h3 class="subtitle">Lorem ipsum sit amet dolor loprem alork</h3>
     </div>
 
+    <div>Hello</div>
     <!-- <div class="pointers">
       <div
         v-for="pointer in pointers"
@@ -61,6 +74,7 @@
 import { defineComponent } from 'vue';
 import { default as POINTERS, Pointer } from '@/plugins/pointers';
 import '@/assets/style/global.scss';
+import '@/assets/style/animation.scss';
 
 export default defineComponent({
   name: 'HomePage',
@@ -133,12 +147,15 @@ export default defineComponent({
   .presentation {
     display: flex;
     flex-flow: column wrap;
-    align-content: center;
+    align-content: flex-start;
     align-items: flex-end;
+    padding: 0 80px;
+
     .title {
       font-size: 6rem;
       font-family: 'LeagueSpartan';
       display: flex;
+      align-items: center;
 
       h2 {
         margin: 0;
@@ -147,8 +164,16 @@ export default defineComponent({
     .title-decoration {
       width: 30px;
       height: 140px;
-      background-color: #4062bb;
       margin-right: 40px;
+      overflow: hidden;
+
+      div {
+        width: 80px;
+        height: 7px;
+        background-color: #4062bb;
+        margin-bottom: 10px;
+        animation: slide 1.8s linear infinite;
+      }
     }
     .subtitle {
       font-size: 1.5rem;
