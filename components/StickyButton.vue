@@ -32,16 +32,6 @@ export default defineComponent({
   },
   methods: {
     buttonMove(event: MouseEvent) {
-      // console.log('###################');
-      // console.log('client =>', event.clientX - this.buttonWidth, event.clientY);
-      // console.log('page =>', event.pageX - this.buttonWidth, event.pageY);
-      // console.log('screen =>', event.screenX - this.buttonWidth, event.screenY);
-      // console.log('xy =>', event.x - this.buttonWidth, event.y);
-      // console.log(this.$refs.stickyButton.getBoundingClientRect().left);
-      // console.log(this.$refs.stickyButton.getBoundingClientRect().top);
-
-      // console.log('###################');
-
       const buttonPosition = {
         width: this.$refs.stickyButton.clientWidth,
         height: this.$refs.stickyButton.clientHeight,

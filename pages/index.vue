@@ -20,19 +20,7 @@
 
     <div class="presentation">
       <div class="title">
-        <div class="title-decoration">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <AnimatedBar />
         <h2>
           web_ <br />
           developer
@@ -159,20 +147,6 @@ export default defineComponent({
 
       h2 {
         margin: 0;
-      }
-    }
-    .title-decoration {
-      width: 30px;
-      height: 140px;
-      margin-right: 40px;
-      overflow: hidden;
-
-      div {
-        width: 80px;
-        height: 7px;
-        background-color: #4062bb;
-        margin-bottom: 10px;
-        animation: slide 1.8s linear infinite;
       }
     }
     .subtitle {
