@@ -3,29 +3,19 @@
     <div class="page-header">
       <h1 class="name-title">Rémi Barthe</h1>
 
-      <div class="links">
-        <StickyButton>
-          <img alt="logo github" src="../assets/images/github.svg" />
-        </StickyButton>
-
-        <StickyButton>
-          <img alt="logo at mail" src="../assets/images/at.svg" />
-        </StickyButton>
-
-        <StickyButton>
-          <img alt="logo linkedin" src="../assets/images/linkedin.svg" />
-        </StickyButton>
-      </div>
+      <LinkBlock />
     </div>
 
     <div class="presentation">
       <div class="title">
         <AnimatedBar />
+
         <h2>
           web_ <br />
           developer
         </h2>
       </div>
+
       <h3 class="subtitle">Lorem ipsum sit amet dolor loprem alork</h3>
     </div>
 
@@ -125,11 +115,6 @@ export default defineComponent({
     .name-title {
       font-size: 1.5rem;
       font-family: 'ZenKakuBlack';
-    }
-    .links {
-      display: flex;
-      transform: rotate(5.45deg);
-      cursor: pointer;
     }
   }
   .presentation {
