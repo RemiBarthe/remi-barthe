@@ -1,6 +1,6 @@
 <template>
   <div class="animated-bar">
-    <div v-for="i in 12"></div>
+    <div v-for="i in 14"></div>
   </div>
 </template>
 
@@ -21,10 +21,10 @@ export default defineComponent({
 
   div {
     width: 80px;
-    height: 7px;
+    height: 5px;
     background-color: #4062bb;
     margin-bottom: 10px;
-    animation: slide 1.8s linear infinite;
+    animation: barSlide 1.8s linear infinite;
   }
 }
 </style>

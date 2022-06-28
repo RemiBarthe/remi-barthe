@@ -17,6 +17,8 @@
       </div>
 
       <h3 class="subtitle">Lorem ipsum sit amet dolor loprem alork</h3>
+
+      <BubbleDecoration class="bubble-decoration" />
     </div>
 
     <div>Hello</div>
@@ -123,6 +125,7 @@ export default defineComponent({
     align-content: flex-start;
     align-items: flex-end;
     padding: 0 80px;
+    position: relative;
 
     .title {
       font-size: 6rem;
@@ -132,12 +135,19 @@ export default defineComponent({
 
       h2 {
         margin: 0;
+        // text-shadow: 4px 0 0 #fff, -4px 0 0 #fff, 0 4px 0 #fff, 0 -4px 0 #fff,
+        //   2px 2px #fff, -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff;
       }
     }
     .subtitle {
       font-size: 1.5rem;
       font-family: 'ZenKakuBold';
       text-align: right;
+    }
+    .bubble-decoration {
+      position: absolute;
+      top: -110px;
+      left: 150px;
     }
   }
   .pointers {
