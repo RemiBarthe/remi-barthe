@@ -2,7 +2,7 @@
   <div
     class="bubbles"
     ref="bubbleContainer"
-    @mousemove="decorationMouve"
+    @mousemove="decorationMove"
     @mouseleave="decorationHover = false"
     :style="decorationPosition"
   >
@@ -29,7 +29,7 @@ export default defineComponent({
     }
   },
   methods: {
-    decorationMouve(event: MouseEvent) {
+    decorationMove(event: MouseEvent) {
       const decorationPosition = {
         width: this.$refs.bubbleContainer.clientWidth,
         height: this.$refs.bubbleContainer.clientHeight,

@@ -132,6 +132,8 @@ export default defineComponent({
       font-family: 'LeagueSpartan';
       display: flex;
       align-items: center;
+      z-index: 2;
+      pointer-events: none;
 
       h2 {
         margin: 0;
@@ -148,6 +150,7 @@ export default defineComponent({
       position: absolute;
       top: -110px;
       left: 150px;
+      z-index: 1;
     }
   }
   .pointers {
@@ -157,6 +160,8 @@ export default defineComponent({
     top: 0;
     left: 0;
     filter: url('#filter');
+    pointer-events: none;
+    z-index: -1;
     .pointer {
       position: absolute;
       top: 0;
